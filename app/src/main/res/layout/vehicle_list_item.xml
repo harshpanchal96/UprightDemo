@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vehicle"
+            type="com.example.ts62.retrofitdemo2.Model.Item" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@{vehicle.nameofOwner}"
+            android:textColor="@color/colorAccent"
+            android:textSize="15sp"
+            tools:text="@string/app_name" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@{vehicle.vehicleMaker}"
+            android:textColor="@color/colorAccent"
+            android:textSize="15sp"
+            tools:text="@string/app_name" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@{vehicle.vehicleModel}"
+            android:textColor="@color/colorAccent"
+            android:textSize="15sp"
+            tools:text="@string/app_name" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@{vehicle.vehicleRegistrationNumber}"
+            android:textColor="@color/colorAccent"
+            android:textSize="15sp"
+            tools:text="@string/app_name" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@{String.valueOf(vehicle.vehicleTypeId)}"
+            android:textColor="@color/colorAccent"
+            android:textSize="15sp"
+            tools:text="@string/app_name" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@{String.valueOf(vehicle.vehicleId)}"
+            android:textColor="@color/colorAccent"
+            android:textSize="15sp"
+            tools:text="@string/app_name" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="5dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:Url="@{vehicle.url}"/>
+    </LinearLayout>
+</layout>
