@@ -1,18 +1,16 @@
-package com.example.ts62.retrofitdemo2;
+package com.example.ts62.retrofitdemo2.activities;
 
-import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.widget.TextView;
 
 import com.example.ts62.retrofitdemo2.Adapter.VehicleAdapter;
-import com.example.ts62.retrofitdemo2.Model.Item;
-import com.example.ts62.retrofitdemo2.Model.VehicleResponse;
-import com.example.ts62.retrofitdemo2.Model.VehiclerRequest;
+import com.example.ts62.retrofitdemo2.Model.VehicleModel;
+import com.example.ts62.retrofitdemo2.R;
+import com.example.ts62.retrofitdemo2.response.VehicleResponse;
+import com.example.ts62.retrofitdemo2.request.VehiclerRequest;
 import com.example.ts62.retrofitdemo2.rest.ApiClient;
 import com.example.ts62.retrofitdemo2.rest.ApiInterface;
 
@@ -22,18 +20,18 @@ import java.util.List;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity {
-    private static final String TAG = MainActivity.class.getSimpleName();
+public class VehicleListActivity extends AppCompatActivity {
+    private static final String TAG = VehicleListActivity.class.getSimpleName();
     private static final String API_KEY = "AIzaSyCEkCWuUOA6swNlGK7y6sGpBDDEHl6SC04";
     private RecyclerView recyclerView;
 
-    List<Item> vehicleList = new ArrayList<>();
+    List<VehicleModel> vehicleList = new ArrayList<>();
     VehicleAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_common_list);
 
         recyclerView = findViewById(R.id.rvList);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
@@ -58,11 +56,11 @@ public class MainActivity extends AppCompatActivity {
                 vehicleList = response.body().getResult().getItems();
                 if (vehicleList == null || vehicleList.size() == 0)
                     return;
-                adapter = new VehicleAdapter(vehicleList, MainActivity.this);
+                adapter = new VehicleAdapter(vehicleList, VehicleListActivity.this);
                 recyclerView.setAdapter(adapter);
 
 //                for (int i = 0; i < vehicleList.size(); i++) {
-//                    Item vehicleModel = vehicleList.get(i);
+//                    VehicleModel vehicleModel = vehicleList.get(i);
 //                    Log.e("Vehicle", String.valueOf(vehicleModel.getVehicleId()));
 //                    Log.e("Vehicle", String.valueOf(vehicleModel.getVehicleMaker()));
 //                    Log.e("Vehicle", String.valueOf(vehicleModel.getVehicleModel()));

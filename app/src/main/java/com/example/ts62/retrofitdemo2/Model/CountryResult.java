@@ -1,22 +1,24 @@
 package com.example.ts62.retrofitdemo2.Model;
 
+import android.content.ClipData;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class Result {
+public class CountryResult {
 
 @SerializedName("items")
 @Expose
-private List<VehicleModel> items = null;
+private List<CountryModel> items = null;
 
-public List<VehicleModel> getItems() {
+public List<CountryModel> getItems() {
 return items;
 }
 
-public void setItems(List<VehicleModel> vehicleModels) {
-this.items = vehicleModels;
+public void setItems(List<CountryModel> items) {
+this.items = items;
 }
 
 }

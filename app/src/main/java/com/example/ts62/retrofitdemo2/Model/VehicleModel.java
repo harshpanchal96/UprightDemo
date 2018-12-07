@@ -7,7 +7,7 @@ import com.bumptech.glide.Glide;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Item {
+public class VehicleModel {
 
     @SerializedName("VehicleId")
     @Expose

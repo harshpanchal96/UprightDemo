@@ -1,4 +1,4 @@
-package com.example.ts62.retrofitdemo2.Model;
+package com.example.ts62.retrofitdemo2.request;
 
 public class VehiclerRequest {
     private int UserId;

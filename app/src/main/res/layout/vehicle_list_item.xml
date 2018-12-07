@@ -5,7 +5,7 @@
 
         <variable
             name="vehicle"
-            type="com.example.ts62.retrofitdemo2.Model.Item" />
+            type="com.example.ts62.retrofitdemo2.Model.VehicleModel" />
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"

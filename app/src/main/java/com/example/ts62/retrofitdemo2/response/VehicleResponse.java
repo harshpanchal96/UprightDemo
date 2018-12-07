@@ -1,7 +1,8 @@
-package com.example.ts62.retrofitdemo2.Model;
+package com.example.ts62.retrofitdemo2.response;
 
 import android.content.ClipData;
 
+import com.example.ts62.retrofitdemo2.Model.Result;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 

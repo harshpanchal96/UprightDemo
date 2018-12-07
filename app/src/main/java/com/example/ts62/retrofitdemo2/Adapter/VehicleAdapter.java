@@ -2,16 +2,14 @@ package com.example.ts62.retrofitdemo2.Adapter;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;
-import android.renderscript.ScriptGroup;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
-import com.example.ts62.retrofitdemo2.Model.Item;
+import com.example.ts62.retrofitdemo2.Model.VehicleModel;
 import com.example.ts62.retrofitdemo2.R;
 import com.example.ts62.retrofitdemo2.databinding.VehicleListItemBinding;
 
@@ -19,10 +17,10 @@ import com.example.ts62.retrofitdemo2.databinding.VehicleListItemBinding;
 import java.util.List;
 
 public class VehicleAdapter extends RecyclerView.Adapter<VehicleAdapter.MyViewHolder> {
-    private List<Item> items;
+    private List<VehicleModel> items;
     private Context context;
 
-    public VehicleAdapter(List<Item> items, Context context) {
+    public VehicleAdapter(List<VehicleModel> items, Context context) {
         this.items = items;
         this.context = context;
     }
@@ -36,11 +34,11 @@ public class VehicleAdapter extends RecyclerView.Adapter<VehicleAdapter.MyViewHo
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
 //        myViewHolder.binding.setText("Test text");
-        Item item = this.items.get(i);
+        VehicleModel vehicleModel = this.items.get(i);
 
-        Log.e("Adapter",item.toString());
+        Log.e("Adapter", vehicleModel.toString());
 
-        myViewHolder.binding.setVehicle(item);
+        myViewHolder.binding.setVehicle(vehicleModel);
     }
 
     @Override
