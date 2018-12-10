@@ -2,9 +2,10 @@
 <layout>
 
     <data>
-            <variable
-                name="presenter"
-                type="com.example.ts62.retrofitdemo2.activities.MainActivity"/>
+
+        <variable
+            name="presenter"
+            type="com.example.ts62.retrofitdemo2.activities.MainActivity" />
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -21,8 +22,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
-            android:text="Vehicle"
-            android:onClick="@{()->presenter.OnVehicelClick()}"/>
+            android:onClick="@{()->presenter.OnVehicelClick()}"
+            android:text="Vehicle" />
 
         <Button
             android:id="@+id/btn_country"
@@ -30,7 +31,17 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
-            android:text="Country"
-            android:onClick="@{()->presenter.OnCountryClick()}"/>
+            android:onClick="@{()->presenter.OnCountryClick()}"
+            android:text="Country" />
+
+        <Button
+            android:id="@+id/btn_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:onClick="@{()->presenter.OnSignUpClick()}"
+            android:text="Signup" />
+
     </LinearLayout>
 </layout>

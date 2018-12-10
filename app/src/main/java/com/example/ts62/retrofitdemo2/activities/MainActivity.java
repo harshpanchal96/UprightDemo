@@ -21,14 +21,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void OnVehicelClick() {
-        Intent intent = new Intent(this,VehicleListActivity.class);
+        Intent intent = new Intent(this, VehicleListActivity.class);
         startActivity(intent);
-        Toast.makeText(this, "on vehicel click", Toast.LENGTH_LONG).show();
     }
 
     public void OnCountryClick() {
-        Intent intent = new Intent(this,CountryListActivity.class);
+        Intent intent = new Intent(this, CountryListActivity.class);
         startActivity(intent);
-        Toast.makeText(this, "country clicked", Toast.LENGTH_SHORT).show();
+    }
+
+    public void OnSignUpClick() {
+        Intent i = new Intent(this, SingnUpActivity.class);
+        startActivity(i);
+
     }
 }

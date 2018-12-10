@@ -1,7 +1,9 @@
 package com.example.ts62.retrofitdemo2.rest;
 
 import com.example.ts62.retrofitdemo2.request.CountryRequest;
+import com.example.ts62.retrofitdemo2.request.SignUpRequest;
 import com.example.ts62.retrofitdemo2.response.CountryResponse;
+import com.example.ts62.retrofitdemo2.response.SignUpResponse;
 import com.example.ts62.retrofitdemo2.response.VehicleResponse;
 import com.example.ts62.retrofitdemo2.request.VehiclerRequest;
 
@@ -16,4 +18,7 @@ public interface ApiInterface {
 
     @POST("GetCountryDetails")
     Call<CountryResponse> getCountryDetail(@Body CountryRequest request);
+
+    @POST("AddUser")
+    Call<SignUpResponse> getSignupDetail(@Body SignUpRequest request);
 }
